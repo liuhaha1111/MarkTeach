@@ -1,0 +1,23 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{TITLE}}</title>
+    <style>
+      body { margin: 0; font-family: Georgia, serif; display: grid; grid-template-columns: 260px 1fr; }
+      aside { min-height: 100vh; padding: 24px; background: #f6f1e9; }
+      main { padding: 32px; }
+      ul { list-style: none; padding-left: 0; }
+      .toc-level-2 { margin-left: 14px; }
+      .toc-level-3 { margin-left: 28px; }
+    </style>
+  </head>
+  <body>
+    <aside>
+      <h2>Contents</h2>
+      <ul>{{TOC}}</ul>
+    </aside>
+    <main>{{CONTENT}}</main>
+  </body>
+</html>

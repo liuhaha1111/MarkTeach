@@ -1,0 +1,26 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{TITLE}}</title>
+    <style>
+      body { margin: 0; font-family: "Trebuchet MS", sans-serif; background: linear-gradient(115deg, #f5fbff, #eef7f2); }
+      .shell { max-width: 1080px; margin: 24px auto; display: grid; grid-template-columns: 240px 1fr; gap: 20px; }
+      nav { background: #fff; border-radius: 14px; padding: 18px; box-shadow: 0 8px 26px rgba(0,0,0,.08); }
+      article { background: #fff; border-radius: 14px; padding: 24px; box-shadow: 0 8px 26px rgba(0,0,0,.08); }
+      ul { list-style: none; padding-left: 0; }
+      .toc-level-2 { margin-left: 12px; }
+      .toc-level-3 { margin-left: 24px; }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <nav>
+        <h3>Navigation</h3>
+        <ul>{{TOC}}</ul>
+      </nav>
+      <article>{{CONTENT}}</article>
+    </div>
+  </body>
+</html>
