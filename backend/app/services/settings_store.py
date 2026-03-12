@@ -1,4 +1,4 @@
-import json
+﻿import json
 import os
 from datetime import datetime, timezone
 from pathlib import Path
@@ -54,6 +54,12 @@ class SettingsStore:
         return {
             'activeProvider': provider,
             'activeModel': model,
+        }
+
+    def safe_log_context(self, *, provider: str, api_key: str) -> dict:
+        return {
+            'provider': provider,
+            'apiKey': self._mask_api_key(api_key),
         }
 
     def _read_json(self, path: Path) -> dict:

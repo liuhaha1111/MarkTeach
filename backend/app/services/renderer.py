@@ -1,4 +1,4 @@
-import re
+﻿import re
 import unicodedata
 
 import bleach
@@ -48,6 +48,7 @@ def render_preview(raw_markdown: str, theme_id: str, preview_options: dict) -> d
         tags=allowed_tags,
         attributes=allowed_attributes,
         strip=True,
+        strip_comments=True,
     )
 
     toc = _extract_toc(raw_markdown)
